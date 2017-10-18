@@ -39,11 +39,26 @@ int Open(const char *pathname,int oflag,...)
     return  (fd);
 }
 
-void Pipe (int *fds)
+
+
+
+
+void Write(int fd,void *ptr,size_t nbytes)
 {
-    if ( pipe(fds) < 0 ) {
-        err_sys("pipe error");
+    if ( write(fd, ptr, nbytes) != nbytes ) {
+        err_sys("write error");
     }
+}
+
+ssize_t Read(int fd,void *ptr,ssize_t nbytes)
+{
+    ssize_t     n;
+    
+    if ( (n = read(fd, ptr, nbytes)) ==-1 ) {
+        err_sys("read error");
+    }
+    
+    return (n);
 }
 
 pid_t Wait(int *iptr)
@@ -68,20 +83,21 @@ pid_t Waitpid(pid_t pid,int *iptr,int options)
     return (retpid);
 }
 
-void Write(int fd,void *ptr,size_t nbytes)
+pid_t Fork(void)
 {
-    if ( write(fd, ptr, nbytes) != nbytes ) {
-        err_sys("write error");
+    pid_t       pid;
+    
+    if ( (pid = fork()) == -1 ) {
+        err_sys("fork error");
     }
+    
+    return (pid);
 }
 
-ssize_t Read(int fd,void *ptr,ssize_t nbytes)
+/************************************/
+void Pipe (int *fds)
 {
-    ssize_t     n;
-    
-    if ( (n = read(fd, ptr, nbytes)) ==-1 ) {
-        err_sys("read error");
+    if ( pipe(fds) < 0 ) {
+        err_sys("pipe error");
     }
-    
-    return (n);
 }

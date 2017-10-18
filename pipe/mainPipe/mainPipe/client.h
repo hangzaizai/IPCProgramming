@@ -11,4 +11,6 @@
 
 #include <stdio.h>
 
+void client( int readfd,int writefd);
+
 #endif /* client_h */

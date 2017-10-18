@@ -19,6 +19,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include "warpStdio.h"
+#include <errno.h>
 
 
 #define MAXLINE 1024

@@ -11,20 +11,22 @@
 
 #include <stdio.h>
 
+/****************FILES**************/
 //关闭文件
 void Close(int fd);
-
 //打开文件
 int Open(const char *pathname,int oflag,...);
-
 //写入
 void Write(int fd,void *ptr,size_t nbytes);
-
-pid_t Waitpid(pid_t pid,int *iptr,int options);
-
-pid_t Wait(int *iptr);
-
 ssize_t Read(int fd,void *ptr,ssize_t nbytes);
+
+/*******************Fork****************/
+pid_t Wait(int *iptr);
+pid_t Waitpid(pid_t pid,int *iptr,int options);
+pid_t Fork(void);
+
+
+void Pipe (int *fds);
 
 #endif /* wrapUnix_h */
 

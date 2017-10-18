@@ -11,4 +11,6 @@
 
 #include <stdio.h>
 
+void server(int readfd,int writefd);
+
 #endif /* server_h */
