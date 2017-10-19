@@ -22,6 +22,8 @@
 #include <errno.h>
 
 
+
+
 #define MAXLINE 1024
 
 #ifdef __bsdi__

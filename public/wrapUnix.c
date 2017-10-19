@@ -101,3 +101,40 @@ void Pipe (int *fds)
         err_sys("pipe error");
     }
 }
+
+/*posix msg queue */
+int Getopt(int argc, char *const *argv,const char *str)
+{
+    int         opt;
+    
+    if ( (opt = getopt(argc, argv, str)) == '?' ) {
+        exit(1);
+    }
+    
+    return (opt);
+}
+
+int Msgget( key_t key,int flag )
+{
+    int rc;
+    
+    if ( (rc = msgget(key, flag) ) == -1 ) {
+        err_sys("msgget error");
+    }
+    
+    return (rc);
+}
+
+void Msgctl(int id,int cmd,struct msqid_ds *buf)
+{
+    if ( msgctl(id, cmd, buf) == -1 ) {
+        err_sys("msgctl error");
+    }
+}
+
+void Msgsnd(int id,const void *ptr,size_t len,int flag)
+{
+    if ( msgsnd(id, ptr, len, flag) == -1 ) {
+        err_sys("msgsnd error");
+    }
+}

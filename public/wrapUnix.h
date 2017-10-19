@@ -10,6 +10,7 @@
 #define wrapUnix_h
 
 #include <stdio.h>
+#include <sys/msg.h>
 
 /****************FILES**************/
 //关闭文件
@@ -27,6 +28,16 @@ pid_t Fork(void);
 
 
 void Pipe (int *fds);
+
+/* system v msg queue */
+
+/*创建一个消息队列*/
+int Msgget( key_t key,int flag );
+
+/*消息队列的控制*/
+void Msgctl(int id,int cmd,struct msqid_ds *buf);
+
+void Msgsnd(int id,const void *ptr,size_t len,int flag);
 
 #endif /* wrapUnix_h */
 
