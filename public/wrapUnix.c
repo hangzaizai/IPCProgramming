@@ -103,15 +103,14 @@ void Pipe (int *fds)
 }
 
 /*posix msg queue */
-int Getopt(int argc, char *const *argv,const char *str)
+key_t Ftok(const char *pathname,int id)
 {
-    int         opt;
-    
-    if ( (opt = getopt(argc, argv, str)) == '?' ) {
-        exit(1);
+    key_t       key;
+    if ( (key = ftok(pathname, id)) == -1 ) {
+        err_sys("ftok error");
     }
     
-    return (opt);
+    return (key);
 }
 
 int Msgget( key_t key,int flag )

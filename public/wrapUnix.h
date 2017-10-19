@@ -32,6 +32,9 @@ void Pipe (int *fds);
 /* system v msg queue */
 
 /*创建一个消息队列*/
+
+key_t Ftok(const char *pathname,int id);
+
 int Msgget( key_t key,int flag );
 
 /*消息队列的控制*/
