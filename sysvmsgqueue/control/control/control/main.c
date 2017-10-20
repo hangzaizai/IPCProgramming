@@ -44,6 +44,7 @@ int main(int argc, const char * argv[]) {
    
     system("ipcs -q");
     
+    //移除队列
     Msgctl(msqid, IPC_RMID, NULL);
     
     return 0;

@@ -29,10 +29,11 @@ pid_t Fork(void);
 
 void Pipe (int *fds);
 
+/* 命令行参数 */
+int Getopt(int argc,char *const *argv,const char *str);
+
 /* system v msg queue */
-
 /*创建一个消息队列*/
-
 key_t Ftok(const char *pathname,int id);
 
 int Msgget( key_t key,int flag );

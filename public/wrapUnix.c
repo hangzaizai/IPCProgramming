@@ -102,6 +102,19 @@ void Pipe (int *fds)
     }
 }
 
+/* cmd option */
+int Getopt(int argc,char *const *argv,const char *str)
+{
+    int     opt;
+    
+    //=='?'的逻辑表示最大输入的字符串个数
+    if ( (opt = getopt(argc, argv, str)) == '?' ) {
+        exit(1);
+    }
+    
+    return (opt);
+}
+
 /*posix msg queue */
 key_t Ftok(const char *pathname,int id)
 {
