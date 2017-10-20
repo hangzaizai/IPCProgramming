@@ -21,9 +21,6 @@
 #include "warpStdio.h"
 #include <errno.h>
 
-
-
-
 #define MAXLINE 1024
 
 #ifdef __bsdi__
@@ -31,5 +28,9 @@
 #else
 #define va_mode_t mode_t
 #endif
+
+/* system V msg */
+#define MQ_KEY1 1234
+#define MQ_KEY2 2345
 
 #endif /* unixIPC_h */
