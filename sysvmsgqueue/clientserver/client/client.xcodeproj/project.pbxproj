@@ -13,6 +13,7 @@
 		31C36FDD1F99D5EA002CDC66 /* wrapUnix.c in Sources */ = {isa = PBXBuildFile; fileRef = 31C36FD91F99D5EA002CDC66 /* wrapUnix.c */; };
 		31C36FE01F99D7D4002CDC66 /* server.c in Sources */ = {isa = PBXBuildFile; fileRef = 31C36FDE1F99D7D4002CDC66 /* server.c */; };
 		31C36FE31F99D7DE002CDC66 /* client.c in Sources */ = {isa = PBXBuildFile; fileRef = 31C36FE11F99D7DE002CDC66 /* client.c */; };
+		31C36FE91F99D9F5002CDC66 /* msg.c in Sources */ = {isa = PBXBuildFile; fileRef = 31C36FE71F99D9F5002CDC66 /* msg.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -41,6 +42,8 @@
 		31C36FDF1F99D7D4002CDC66 /* server.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = server.h; sourceTree = "<group>"; };
 		31C36FE11F99D7DE002CDC66 /* client.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = client.c; sourceTree = "<group>"; };
 		31C36FE21F99D7DE002CDC66 /* client.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = client.h; sourceTree = "<group>"; };
+		31C36FE71F99D9F5002CDC66 /* msg.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = msg.c; sourceTree = "<group>"; };
+		31C36FE81F99D9F5002CDC66 /* msg.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = msg.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +88,8 @@
 				31C36FDF1F99D7D4002CDC66 /* server.h */,
 				31C36FE11F99D7DE002CDC66 /* client.c */,
 				31C36FE21F99D7DE002CDC66 /* client.h */,
+				31C36FE71F99D9F5002CDC66 /* msg.c */,
+				31C36FE81F99D9F5002CDC66 /* msg.h */,
 			);
 			path = client;
 			sourceTree = "<group>";
@@ -148,6 +153,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				31C36FDC1F99D5EA002CDC66 /* warpStdio.c in Sources */,
+				31C36FE91F99D9F5002CDC66 /* msg.c in Sources */,
 				31C36FDD1F99D5EA002CDC66 /* wrapUnix.c in Sources */,
 				31C36FE31F99D7DE002CDC66 /* client.c in Sources */,
 				31C36FCE1F99D5A9002CDC66 /* main.c in Sources */,
